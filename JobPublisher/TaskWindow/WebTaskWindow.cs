@@ -28,6 +28,7 @@ namespace JobPublisher.TaskWindow
              if (page == null) return;
             page.setWebBrowser(this.tweb);
             page.Login("m21865388ucj", "zxcv1234");
+            page.doPublish(null);
         }
 
         public void NavigateUrl(string url)

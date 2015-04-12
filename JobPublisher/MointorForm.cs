@@ -45,7 +45,7 @@ namespace JobPublisher
             //ContentTable.RowStyles.
             //ContentTable.Width = splitContainer2.Panel2.Width;
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 1; i++)
             {
                 ContentTable.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
                 ClientBar client = new ClientBar();
