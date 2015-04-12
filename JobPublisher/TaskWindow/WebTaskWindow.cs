@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using JobPublisher.Task;
-
+using publisherFactory;
 namespace JobPublisher.TaskWindow
 {
     public partial class WebTaskWindow : JobWindowControl
@@ -24,6 +24,10 @@ namespace JobPublisher.TaskWindow
         private void btnStart_Click(object sender, EventArgs e)
         {
             //tweb.Navigate("www.baidu.com");
+             IPublisher.IPage page= publisherFactory.PublisherFactory.CreatePage(tweb.Url.ToString());
+             if (page == null) return;
+            page.setWebBrowser(this.tweb);
+            page.Login("m21865388ucj", "zxcv1234");
         }
 
         public void NavigateUrl(string url)
