@@ -13,7 +13,7 @@ namespace publisher
 {
     public class NewMasker
     {
-        string dataPath = @"D:\Program Files\Tesseract-OCR\tessdata\";
+        string dataPath = System.Windows.Forms.Application.StartupPath +@"\Tesseract-OCR\tessdata\";
         string language = "zhaopin";
         TesseractEngine engine = null;
         public NewMasker()
